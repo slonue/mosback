@@ -1,6 +1,8 @@
-package mos.mosback.entity;
+package mos.mosback.data.entity;
+
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "study_group")
@@ -8,62 +10,57 @@ public class StudyGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long key;
 
-    @Column(name = "group_name")
-    private String groupName;
-
-    @Column
-    private String location;
-
-    @Column(name = "max_members")
-    private int maxMembers;
+    @Column(name = "title")
+    private String title;
 
     @Column
-    private String subject;
+    private String mode;
 
-    // Getter and Setter methods for id
-    public Long getId() {
-        return id;
-    }
+    @Column(name = "num")
+    private int num;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Column
+    private Date startDate;
 
-    // Getter and Setter methods for groupName
-    public String getGroupName() {
-        return groupName;
-    }
+    @Column
+    private Date endDate;
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
+    @Column
+    private String date;
 
-    // Getter and Setter methods for location
-    public String getLocation() {
-        return location;
-    }
+    @Column
+    private String goal;
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
+    @Column
+    private String rules;
 
-    // Getter and Setter methods for maxMembers
-    public int getMaxMembers() {
-        return maxMembers;
-    }
+    @Column
+    private Date createDate;
 
-    public void setMaxMembers(int maxMembers) {
-        this.maxMembers = maxMembers;
-    }
+    @Column
+    private Integer click;
 
-    // Getter and Setter methods for subject
-    public String getSubject() {
-        return subject;
-    }
+    @Column
+    private Date rcstart;
 
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
+    @Column
+    private Date rcend;
+
+    @Column
+    private String quest;
+
+
+    @Column
+    private String tend;
+
+    @Column
+    private String category;
+
+    @Column
+    private boolean onoff;
+
+
+
 }
